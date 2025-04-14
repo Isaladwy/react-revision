@@ -10,7 +10,12 @@ export default function MyFirstComponent() {
   return (
     <div>
       <h1>Name: {person.name}</h1>
-      <p>age {person.age}</p>
+      <p>age: {person.age}</p>
+      <button onClick={handleClick} >Click here</button>
     </div>
   );
+}
+
+function handleClick() {
+  alert("Hello ");
 }
