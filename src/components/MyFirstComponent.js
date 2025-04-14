@@ -7,15 +7,15 @@ export default function MyFirstComponent() {
     city: 'Alexandria',
   };
 
-  const eleStyle = {
+  const elmStyle = {
     backgroundColor: 'black',
     
   };
 
   return (
     <div>
-      <h1 style={eleStyle}>Name: {person.name}</h1>
-      <p>age: {person.age}</p>
+      <h1 style={elmStyle}>Name: {person.name}</h1>
+      <p style={elmStyle}>age: {person.age}</p>
       <button onClick={handleClick}>Click here</button>
     </div>
   );
