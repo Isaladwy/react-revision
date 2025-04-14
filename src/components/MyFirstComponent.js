@@ -9,9 +9,8 @@ export default function MyFirstComponent() {
 
   return (
     <div>
-      <h1>{person.name}</h1>
-      <h1>Hello World!</h1>
-      <p>This is my first component.</p>
+      <h1>Name: {person.name}</h1>
+      <p>age {person.age}</p>
     </div>
   );
 }
