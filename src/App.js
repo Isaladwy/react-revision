@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MyFirstComponent from './components/MyFirstComponent';
 
 function App() {
   return (
@@ -13,13 +14,6 @@ function App() {
   );
 }
 
-function MyFirstComponent() {
-  return (
-    <div>
-      <h1>Hello World!</h1>
-      <p>This is my first component.</p>
-    </div>
-  );
-}
+
 
 export default App;
