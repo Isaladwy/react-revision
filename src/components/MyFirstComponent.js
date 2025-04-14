@@ -2,20 +2,25 @@ export default function MyFirstComponent() {
   const x = 5;
 
   const person = {
-    name: "Tamim",
+    name: 'Tamim',
     age: 2,
-    city: "Alexandria",
+    city: 'Alexandria',
+  };
+
+  const eleStyle = {
+    backgroundColor: 'black',
+    
   };
 
   return (
     <div>
-      <h1>Name: {person.name}</h1>
+      <h1 style={eleStyle}>Name: {person.name}</h1>
       <p>age: {person.age}</p>
-      <button onClick={handleClick} >Click here</button>
+      <button onClick={handleClick}>Click here</button>
     </div>
   );
 }
 
 function handleClick() {
-  alert("Hello ");
+  alert('Hello ');
 }
