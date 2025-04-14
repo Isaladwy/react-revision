@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  
+}
+.posts-container {
+  width: 600px;
 }
 
 .sidebar {
@@ -8,13 +19,15 @@
   justify-content: center;
   gap: 10px;
   
+ 
 }
 
 .sidebar-container {
-  width: 40%;
+  
   border: 4px solid #068175;
   margin: 10px;
   padding: 10px;
+  width: 250px;
 }
 
 .button {
@@ -31,15 +44,7 @@
   background-color: rgb(78, 16, 78);
 }
 
-.main-container {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  width: 60%;
-}
-.posts-container {
-  width: 50%;
-}
+
 
 .App-logo {
   height: 40vmin;
