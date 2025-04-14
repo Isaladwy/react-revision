@@ -15,7 +15,9 @@ export default function MyFirstComponent() {
     <div>
       <h1 style={elmStyle}>Name: {person.name}</h1>
       <h2 style={elmStyle}>age: {person.age}</h2>
-      <h3 className={'active redbg'}>{person.city}</h3>
+      <h3 className={person.name === 'Tamim' ? 'active redbg' : ''}>
+        {person.city}
+      </h3>
       <button onClick={handleClick}>Click here</button>
     </div>
   );
