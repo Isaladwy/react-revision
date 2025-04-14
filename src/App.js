@@ -9,15 +9,18 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Tamim Aladwy</h1>
+        <MyFirstComponent />
       </header>
+    </div>
+  );
+}
+
+function MyFirstComponent() {
+  return (
+    <div>
+      <h1>Hello World!</h1>
+      <p>This is my first component.</p>
     </div>
   );
 }
