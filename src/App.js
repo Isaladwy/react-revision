@@ -19,7 +19,7 @@ function App() {
         </div>
         <div className="sidebar-container">
           <SideBar />
-          <Article />
+          <Article content='First' />
           <Article name='Islam'/>
           <Article name='Ahmad'/>
         </div>
