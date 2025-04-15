@@ -2,7 +2,7 @@ function Article({
   name = 'Tamim',
   email = 'Taladwy@gmail.com',
   year = `2023`,
-  content,
+  content = 'no content provided',
 }) {
   return (
     <div style={{ boxShadow: '0px 0px 10px gray', margin: '10px' }}>
