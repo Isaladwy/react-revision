@@ -21,21 +21,23 @@ function App() {
         </div>
         <div className="sidebar-container">
           <SideBar />
-          
+          {showArticle && <AppArticle />}
         </div>
       </div>
     </div>
   );
 }
 
-function appArticle() {
-  return <>
-  <Article name='Tito'>
-  <h1>Initial</h1>
-</Article>
-<Article content='First' />
-<Article content={secondArticle} name='Islam'/>
-<Article name='Ahmad'/>
-  </>
+function AppArticle() {
+  return (
+    <>
+      <Article name="Tito">
+        <h1>Initial</h1>
+      </Article>
+      <Article content="First" />
+      <Article content={secondArticle} name="Islam" />
+      <Article name="Ahmad" />
+    </>
+  );
 }
 export default App;
