@@ -6,15 +6,18 @@ import MyForm from './components/MyForm';
 import MyInput from './components/MyInput';
 import Posts from './components/Posts';
 import SideBar from './components/SideBar';
+import { useState } from 'react';
 
 const showArticle = true;
 const secondArticle = 'This is the second article';
 function App() {
+  const [name, setName] = useState('Tamim');
+
   return (
     <div className="App">
       <Header />
-      <MyButton />
-      <MyInput />
+      <MyButton name={name} setName={setName} />
+      <MyInput name={name} setName={setName} />
       <br/>
       <MyForm />
       <div className="main-container">
