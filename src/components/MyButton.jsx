@@ -1,5 +1,6 @@
+let name = 'Tamim';
+
 function MyButton() {
-  let name = 'Tamim';
   return (
     <div>
       <button onClick={handleClick}>Click Me</button>
