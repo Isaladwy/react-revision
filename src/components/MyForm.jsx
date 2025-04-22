@@ -22,7 +22,7 @@ function MyForm() {
         type="text"
         value={formData.nameInput}
         onChange={(event) => {
-          setFormData({ nameInput: event.target.value });
+          setFormData({ ...setFormData, nameInput: event.target.value });
         }}
       />
       <br />
@@ -32,7 +32,7 @@ function MyForm() {
         type="email"
         value={formData.emailInput}
         onChange={(event) => {
-          setFormData({ emailInput: event.target.value });
+          setFormData({...setFormData, emailInput: event.target.value });
         }}
       />
 
