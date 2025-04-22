@@ -2,6 +2,7 @@ import './App.css';
 import Article from './components/Article';
 import Header from './components/Header';
 import MyButton from './components/MyButton';
+import MyInput from './components/MyInput';
 import Posts from './components/Posts';
 import SideBar from './components/SideBar';
 
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <MyButton />
+      <MyInput />
       <div className="main-container">
         <div className="posts-container">
           <Posts />
