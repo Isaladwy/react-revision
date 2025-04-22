@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function MyForm() {
   const [nameInput, setNameInput] = useState('');
+  const [emailInput, setEmailInput] = useState('');
   return (
     <form>
       <hr />
@@ -17,7 +18,13 @@ function MyForm() {
       <br />
       <br />
       <label>Email: </label>
-      <input type="email" />
+      <input
+        type="email"
+        value={emailInput}
+        onChange={(event) => {
+          setEmailInput(event.target.value);
+        }}
+      />
 
       <br />
       <br />
