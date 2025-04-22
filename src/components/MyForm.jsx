@@ -4,7 +4,13 @@ function MyForm() {
   const [nameInput, setNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
   return (
-    <form>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        console.log('Name:', nameInput);
+        console.log('Email:', emailInput);
+      }}
+    >
       <hr />
       <h2>My Form</h2>
       <label>Name: </label>
