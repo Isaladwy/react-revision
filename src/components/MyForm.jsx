@@ -1,14 +1,18 @@
 import { useState } from 'react';
 
 function MyForm() {
-  const [nameInput, setNameInput] = useState('');
-  const [emailInput, setEmailInput] = useState('');
+  // const [nameInput, setNameInput] = useState('');
+  // const [emailInput, setEmailInput] = useState('');
+  const [formData, setFormData] = useState({
+    nameInput: '',
+    emailInput: '',
+  });
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log('Name:', nameInput);
-        console.log('Email:', emailInput);
+        console.log('Name:', formData.nameInput);
+        console.log('Email:', formData.emailInput);
       }}
     >
       <hr />
@@ -16,9 +20,9 @@ function MyForm() {
       <label>Name: </label>
       <input
         type="text"
-        value={nameInput}
+        value={formData.nameInput}
         onChange={(event) => {
-          setNameInput(event.target.value);
+          setFormData({ nameInput: event.target.value });
         }}
       />
       <br />
@@ -26,9 +30,9 @@ function MyForm() {
       <label>Email: </label>
       <input
         type="email"
-        value={emailInput}
+        value={formData.emailInput}
         onChange={(event) => {
-          setEmailInput(event.target.value);
+          setFormData({ emailInput: event.target.value });
         }}
       />
 
