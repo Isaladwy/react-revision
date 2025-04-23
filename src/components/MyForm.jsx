@@ -77,9 +77,17 @@ function MyForm() {
       <br />
       <br />
       <div>
-        <input type="radio" />
+        <input
+          type="radio"
+          name="status"
+          checked={formData.status === 'student'}
+        />
         Student
-        <input type="radio" />
+        <input
+          type="radio"
+          name="status"
+          checked={formData.status === 'teacher'}
+        />
         Teacher
       </div>
       <br />
