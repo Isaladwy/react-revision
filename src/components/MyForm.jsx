@@ -7,6 +7,7 @@ function MyForm() {
     nameInput: '',
     emailInput: '',
     generalInfo: '',
+    isStudent: false, 
   });
   return (
     <form
