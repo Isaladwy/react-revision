@@ -8,6 +8,7 @@ function MyForm() {
     emailInput: '',
     generalInfo: '',
     isStudent: false,
+    country: '',
   });
   return (
     <form
@@ -60,6 +61,12 @@ function MyForm() {
           setFormData({ ...formData, isStudent: e.target.checked });
         }}
       />
+      <br />
+      <select value={formData.country}>
+        <option>KSA</option>
+        <option>Egypt</option>
+        <option>Qatar</option>
+      </select>
       <br />
       <br />
       <button>Submit</button>
