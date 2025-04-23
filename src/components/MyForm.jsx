@@ -12,8 +12,7 @@ function MyForm() {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log('Name:', formData.nameInput);
-        console.log('Email:', formData.emailInput);
+        console.log(formData);
       }}
     >
       <hr />
@@ -41,7 +40,13 @@ function MyForm() {
       <br />
 
       <label>General Info: </label>
-      <textarea>{formData.generalInfo}</textarea>
+      <textarea
+        onChange={(e) => {
+          setFormData({ ...setFormData, generalInfo: e.target.value });
+        }}
+      >
+        {formData.generalInfo}
+      </textarea>
 
       <br />
       <br />
