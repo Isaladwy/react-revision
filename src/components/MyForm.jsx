@@ -51,6 +51,10 @@ function MyForm() {
 
       <br />
       <br />
+      <label>Are you a student? </label>
+      <input type="checkbox" />
+      <br />
+      <br />
       <button>Submit</button>
       <hr />
     </form>
