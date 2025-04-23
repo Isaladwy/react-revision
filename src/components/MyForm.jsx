@@ -80,6 +80,7 @@ function MyForm() {
         <input
           type="radio"
           name="status"
+          value="student"
           checked={formData.status === 'student'}
           onChange={(e) => {
             setFormData({ ...formData, status: e.target.value });
@@ -89,6 +90,7 @@ function MyForm() {
         <input
           type="radio"
           name="status"
+          value="teacher"
           checked={formData.status === 'teacher'}
           onChange={(e) => {
             setFormData({ ...formData, status: e.target.value });
