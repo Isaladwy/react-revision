@@ -7,7 +7,7 @@ function MyForm() {
     nameInput: '',
     emailInput: '',
     generalInfo: '',
-    isStudent: false, 
+    isStudent: false,
   });
   return (
     <form
@@ -53,7 +53,13 @@ function MyForm() {
       <br />
       <br />
       <label>Are you a student? </label>
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        checked={formData.isStudent}
+        onChange={(e) => {
+          setFormData({ ...formData, isStudent: e.target.checked });
+        }}
+      />
       <br />
       <br />
       <button>Submit</button>
