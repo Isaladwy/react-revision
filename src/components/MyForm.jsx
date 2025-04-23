@@ -9,6 +9,7 @@ function MyForm() {
     generalInfo: '',
     isStudent: false,
     country: '',
+    status: '',
   });
   return (
     <form
