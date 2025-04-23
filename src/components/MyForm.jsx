@@ -6,6 +6,7 @@ function MyForm() {
   const [formData, setFormData] = useState({
     nameInput: '',
     emailInput: '',
+    generalInfo
   });
   return (
     <form
@@ -35,6 +36,12 @@ function MyForm() {
           setFormData({...setFormData, emailInput: event.target.value });
         }}
       />
+
+      <br />
+      <br />
+
+      <label>General Info: </label>
+      <textarea ></textarea>
 
       <br />
       <br />
