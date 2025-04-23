@@ -62,7 +62,9 @@ function MyForm() {
         }}
       />
       <br />
-      <select value={formData.country}>
+      <select value={formData.country} onChange={e=>{
+        setFormData({...formData, country: e.target.value });
+      }}>
         <option>KSA</option>
         <option>Egypt</option>
         <option>Qatar</option>
