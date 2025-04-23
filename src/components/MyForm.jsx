@@ -22,7 +22,7 @@ function MyForm() {
         type="text"
         value={formData.nameInput}
         onChange={(event) => {
-          setFormData({ ...setFormData, nameInput: event.target.value });
+          setFormData({ ...formData, nameInput: event.target.value });
         }}
       />
       <br />
@@ -32,7 +32,7 @@ function MyForm() {
         type="email"
         value={formData.emailInput}
         onChange={(event) => {
-          setFormData({ ...setFormData, emailInput: event.target.value });
+          setFormData({ ...formData, emailInput: event.target.value });
         }}
       />
 
@@ -41,8 +41,9 @@ function MyForm() {
 
       <label>General Info: </label>
       <textarea
+        value={formData.generalInfo}
         onChange={(e) => {
-          setFormData({ ...setFormData, generalInfo: e.target.value });
+          setFormData({ ...formData, generalInfo: e.target.value });
         }}
       >
         {formData.generalInfo}
