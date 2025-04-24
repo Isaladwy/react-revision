@@ -12,8 +12,9 @@ const showArticle = true;
 const secondArticle = 'This is the second article';
 function App() {
   const [name, setName] = useState('Tamim');
-  const devices = ['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo'];
 
+  
+  const devices = ['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo'];
   const devicesList = devices.map((device) => {
     return <li key={device}>{device}</li>;
   });
@@ -26,7 +27,12 @@ function App() {
       <MyInput name={name} setName={setName} />
       <br />
       <hr/>
-      <div>{devicesList}</div>
+      <div>{devicesList}
+        <div style={{marginTop: '10px'}}>
+          <input type="text" />
+          <button>Add</button>
+        </div>
+      </div>
       <br/>
       <MyForm />
       <div className="main-container">
