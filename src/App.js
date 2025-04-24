@@ -12,13 +12,14 @@ const showArticle = true;
 const secondArticle = 'This is the second article';
 function App() {
   const [name, setName] = useState('Tamim');
+  const devices = ['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo'];
 
   return (
     <div className="App">
       <Header />
       <MyButton name={name} setName={setName} />
       <MyInput name={name} setName={setName} />
-      <br/>
+      <br />
       <MyForm />
       <div className="main-container">
         <div className="posts-container">
