@@ -13,12 +13,11 @@ const secondArticle = 'This is the second article';
 function App() {
   const [name, setName] = useState('Tamim');
 
-  
-  const devices = ['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo'];
+  const [deviceInput, setDeviceInput] = useState('');
+  const [devices, setDevices] = useState(['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo']);
   const devicesList = devices.map((device) => {
     return <li key={device}>{device}</li>;
   });
-  
 
   return (
     <div className="App">
@@ -29,8 +28,10 @@ function App() {
       <hr/>
       <div>{devicesList}
         <div style={{marginTop: '10px'}}>
-          <input type="text" />
-          <button>Add</button>
+          <input type="text" value={deviceInput} onChange={e=>{
+            setDeviceInput(e.target.value);
+          }}/>
+          <button onClick={()=>{devices.push()}}>Add</button>
         </div>
       </div>
       <br/>
