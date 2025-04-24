@@ -31,7 +31,13 @@ function App() {
           <input type="text" value={deviceInput} onChange={e=>{
             setDeviceInput(e.target.value);
           }}/>
-          <button onClick={()=>{devices.push()}}>Add</button>
+          <button onClick={()=>{
+            const newDevices = [...devices];
+            newDevices.push(deviceInput);
+            setDevices(newDevices);
+
+            
+          }}>Add</button>
         </div>
       </div>
       <br/>
