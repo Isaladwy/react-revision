@@ -14,12 +14,20 @@ function App() {
   const [name, setName] = useState('Tamim');
   const devices = ['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo'];
 
+  const devicesList = devices.map((device) => {
+    return <li key={device}>{device}</li>;
+  });
+  
+
   return (
     <div className="App">
       <Header />
       <MyButton name={name} setName={setName} />
       <MyInput name={name} setName={setName} />
       <br />
+      <hr/>
+      <div>{devicesList}</div>
+      <br/>
       <MyForm />
       <div className="main-container">
         <div className="posts-container">
