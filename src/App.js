@@ -35,8 +35,7 @@ function App() {
             const newDevices = [...devices];
             newDevices.push(deviceInput);
             setDevices(newDevices);
-
-            
+            setDeviceInput('');
           }}>Add</button>
         </div>
       </div>
