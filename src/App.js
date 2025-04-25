@@ -32,10 +32,11 @@ function App() {
             setDeviceInput(e.target.value);
           }}/>
           <button onClick={()=>{
-            const newDevices = [...devices];
-            newDevices.push(deviceInput);
-            setDevices(newDevices);
-            setDeviceInput('');
+            // const newDevices = [...devices];
+            // newDevices.push(deviceInput);
+            // setDevices(newDevices);
+            // setDeviceInput('');
+            setDevices([...devices, deviceInput]);
           }}>Add</button>
         </div>
       </div>
