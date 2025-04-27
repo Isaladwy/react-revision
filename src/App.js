@@ -15,11 +15,11 @@ function App() {
 
   const [deviceInput, setDeviceInput] = useState('');
   const [devices, setDevices] = useState([
-    'Samsung',
-    'Apple',
-    'Xiaomi',
-    'Nokia',
-    'Oppo',
+    { id: 1, name: 'Samsung' },
+    { id: 2, name: 'Apple' },
+    { id: 3, name: 'Xiaomi' },
+    { id: 4, name: 'Nokia' },
+    { id: 5, name: 'Oppo' },
   ]);
   const devicesList = devices.map((device) => {
     return (
