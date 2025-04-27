@@ -14,9 +14,19 @@ function App() {
   const [name, setName] = useState('Tamim');
 
   const [deviceInput, setDeviceInput] = useState('');
-  const [devices, setDevices] = useState(['Samsung', 'Apple', 'Xiaomi', 'Nokia', 'Oppo']);
+  const [devices, setDevices] = useState([
+    'Samsung',
+    'Apple',
+    'Xiaomi',
+    'Nokia',
+    'Oppo',
+  ]);
   const devicesList = devices.map((device) => {
-    return <li key={device}>{device}</li>;
+    return (
+      <li key={device}>
+        {device} <button>delete</button>
+      </li>
+    );
   });
 
   return (
@@ -25,22 +35,31 @@ function App() {
       <MyButton name={name} setName={setName} />
       <MyInput name={name} setName={setName} />
       <br />
-      <hr/>
-      <div>{devicesList}
-        <div style={{marginTop: '10px'}}>
-          <input type="text" value={deviceInput} onChange={e=>{
-            setDeviceInput(e.target.value);
-          }}/>
-          <button onClick={()=>{
-            // const newDevices = [...devices];
-            // newDevices.push(deviceInput);
-            // setDevices(newDevices);
-            setDevices([...devices, deviceInput]);
-            setDeviceInput('');
-          }}>Add</button>
+      <hr />
+      <div>
+        {devicesList}
+        <div style={{ marginTop: '10px' }}>
+          <input
+            type="text"
+            value={deviceInput}
+            onChange={(e) => {
+              setDeviceInput(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              // const newDevices = [...devices];
+              // newDevices.push(deviceInput);
+              // setDevices(newDevices);
+              setDevices([...devices, deviceInput]);
+              setDeviceInput('');
+            }}
+          >
+            Add
+          </button>
         </div>
       </div>
-      <br/>
+      <br />
       <MyForm />
       <div className="main-container">
         <div className="posts-container">
