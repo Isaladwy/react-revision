@@ -24,7 +24,7 @@ function App() {
   const devicesList = devices.map((device) => {
     return (
       <li key={device.id}>
-        {device.name} <button>delete</button>
+        {device.name} <button onClick={() => setDevices(devices.filter(item => item.id !== device.id))}>delete</button>
       </li>
     );
   });
