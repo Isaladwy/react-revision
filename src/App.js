@@ -32,9 +32,22 @@ function App() {
         >
           delete
         </button>
-        <button onClick={()=>{
-          
-        }}>edit</button>
+        <button
+          onClick={() => {
+            setDevices(
+              devices.map((item) =>
+                item.id === device.id
+                  ? {
+                      ...item,
+                      name: prompt('Enter new name:', item.name) || item.name,
+                    }
+                  : item
+              )
+            );
+          }}
+        >
+          edit
+        </button>
       </li>
     );
   });
