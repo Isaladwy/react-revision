@@ -23,8 +23,8 @@ function App() {
   ]);
   const devicesList = devices.map((device) => {
     return (
-      <li key={device}>
-        {device} <button>delete</button>
+      <li key={device.id}>
+        {device.name} <button>delete</button>
       </li>
     );
   });
@@ -51,7 +51,7 @@ function App() {
               // const newDevices = [...devices];
               // newDevices.push(deviceInput);
               // setDevices(newDevices);
-              setDevices([...devices, deviceInput]);
+              setDevices([...devices, { id: devices.length + 1, name: deviceInput }]);
               setDeviceInput('');
             }}
           >
