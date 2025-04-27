@@ -24,7 +24,17 @@ function App() {
   const devicesList = devices.map((device) => {
     return (
       <li key={device.id}>
-        {device.name} <button onClick={() => setDevices(devices.filter(item => item.id !== device.id))}>delete</button>
+        {device.name}{' '}
+        <button
+          onClick={() =>
+            setDevices(devices.filter((item) => item.id !== device.id))
+          }
+        >
+          delete
+        </button>
+        <button onClick={()=>{
+          
+        }}>edit</button>
       </li>
     );
   });
@@ -51,7 +61,10 @@ function App() {
               // const newDevices = [...devices];
               // newDevices.push(deviceInput);
               // setDevices(newDevices);
-              setDevices([...devices, { id: devices.length + 1, name: deviceInput }]);
+              setDevices([
+                ...devices,
+                { id: devices.length + 1, name: deviceInput },
+              ]);
               setDeviceInput('');
             }}
           >
