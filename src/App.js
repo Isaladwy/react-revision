@@ -64,7 +64,10 @@ function App() {
         <button
           onClick={() => {
             setCount(count + 1);
-            setCount(count + 1);
+            setTimeout(() => {
+              setCount(count + 1);
+            }, 1000);
+            
           }}
         >
           Increment
