@@ -14,7 +14,7 @@ function App() {
   const [name, setName] = useState('Tamim');
 
   const [count, setCount] = useState(0);
-  
+
 
   const [deviceInput, setDeviceInput] = useState('');
   const [devices, setDevices] = useState([
@@ -58,6 +58,16 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <br />
+      <hr />
+      <div>
+        <h1>Count: {count}</h1>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <button onClick={() => setCount(count - 1)}>Decrement</button>
+        </div>
+
+      <br />
+      <hr />
       <MyButton name={name} setName={setName} />
       <MyInput name={name} setName={setName} />
       <br />
