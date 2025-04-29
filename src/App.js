@@ -13,6 +13,9 @@ const secondArticle = 'This is the second article';
 function App() {
   const [name, setName] = useState('Tamim');
 
+  const [count, setCount] = useState(0);
+  
+
   const [deviceInput, setDeviceInput] = useState('');
   const [devices, setDevices] = useState([
     { id: 1, name: 'Samsung' },
