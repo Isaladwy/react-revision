@@ -63,10 +63,10 @@ function App() {
         <h1>Count: {count}</h1>
         <button
           onClick={() => {
-            setCount(count + 1);
-            setTimeout(() => {
-              setCount(count + 1);
-            }, 1000);
+            setCount((c)=>{
+              return c+1
+            });
+            
             
           }}
         >
