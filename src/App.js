@@ -63,12 +63,8 @@ function App() {
         <h1>Count: {count}</h1>
         <button
           onClick={() => {
-            setCount((c) => {
-              return c + 1;
-            });
-            setCount((c) => {
-              return c + 1;
-            });
+            setCount((c) => c + 1);
+            setCount((c) => c + 1);
           }}
         >
           Increment
